@@ -9,8 +9,6 @@ Simplistic TypeScript empty project:
 - To start developing, just type:
 
   ```bash
-  # Fetches dependencies
-  npm i
   # Starts a server with live-reload, and recompiles files when they're saved:
   npm start
   ```
