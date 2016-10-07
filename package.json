@@ -12,8 +12,6 @@
     "inline-assets": "^1.1.0",
     "lite-server": "^2.2.2",
     "rollup": "^0.36.1",
-    "rollup-plugin-filesize": "^1.0.0",
-    "rollup-plugin-json": "^2.0.2",
     "rollup-plugin-typescript": "^0.8.1",
     "rollup-plugin-uglify": "^1.0.1",
     "rollup-watch": "^2.5.0",
