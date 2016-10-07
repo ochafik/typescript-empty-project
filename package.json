@@ -6,9 +6,11 @@
     "rollup:w": "rollup -c -w",
     "build": "npm i && npm run rollup && inline-assets index.html build/index.html"
   },
+  "dependencies": {
+    "immutable": "^3.8.1"
+  },
   "devDependencies": {
     "concurrently": "^3.1.0",
-    "immutable": "^3.8.1",
     "inline-assets": "^1.1.0",
     "lite-server": "^2.2.2",
     "rollup": "^0.36.1",
