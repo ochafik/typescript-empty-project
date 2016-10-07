@@ -8,7 +8,7 @@ Simplistic TypeScript empty project:
 - Download [this project's zip archive](https://github.com/ochafik/typescript-empty-project/archive/master.zip), unzip it and cd to its directory in a new terminal
 - To start developing, just type:
 
-  ```
+  ```bash
   # Fetches dependencies
   npm i
   # Starts a server with live-reload, and recompiles files when they're saved:
