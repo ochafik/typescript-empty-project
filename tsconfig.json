@@ -9,6 +9,7 @@
     "outDir": "build",
     "pretty": true,
     "sourceMap": true,
-    "strictNullChecks": true
+    "strictNullChecks": true,
+    "jsx": "react"
   }
 }

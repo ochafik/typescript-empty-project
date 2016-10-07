@@ -1,10 +1,10 @@
 {
   "scripts": {
-    "start": "concurrently --kill-others \"npm run rollup:w\" \"npm run lite\" ",
+    "start": "npm i && concurrently --kill-others \"npm run rollup:w\" \"npm run lite\" ",
     "lite": "lite-server",
     "rollup": "rollup -c",
     "rollup:w": "rollup -c -w",
-    "build": "npm run rollup && inline-assets index.html build/index.html"
+    "build": "npm i && npm run rollup && inline-assets index.html build/index.html"
   },
   "dependencies": {
     "immutable": "^3.8.1"
