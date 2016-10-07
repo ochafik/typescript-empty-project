@@ -14,8 +14,16 @@ Simplistic TypeScript empty project:
   # Starts a server with live-reload, and recompiles files when they're saved:
   npm start
   ```
+  
+- To build a self-contained deployable artefact (`build/index.html`):
 
-This setup:
+  ```
+  npm run build
+  ```
+
+About this setup:
+
 - TypeScript with strict settings (null-awareness, no implicit any, no implicit returns) and down-compilation to ES5
 - Optimized bundle creation with Rollup + Uglify
 - Immutable.js import to get you started with decent collections :-)
+- Inlines all .js into `build/index.html` when running `npm run build`
