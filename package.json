@@ -1,0 +1,19 @@
+{
+  "scripts": {
+    "start": "concurrently --kill-others \"npm run rollup:w\" \"npm run lite\" ",
+    "lite": "lite-server",
+    "rollup": "rollup -c",
+    "rollup:w": "rollup -c -w"
+  },
+  "devDependencies": {
+    "concurrently": "^3.1.0",
+    "immutable": "^3.8.1",
+    "lite-server": "^2.2.2",
+    "rollup": "^0.36.1",
+    "rollup-plugin-filesize": "^1.0.0",
+    "rollup-plugin-typescript": "^0.8.1",
+    "rollup-plugin-uglify": "^1.0.1",
+    "rollup-watch": "^2.5.0",
+    "typescript": "^2.0.3"
+  }
+}
