@@ -14,3 +14,8 @@ Simplistic TypeScript empty project:
   # Starts a server with live-reload, and recompiles files when they're saved:
   npm start
   ```
+
+This setup:
+- TypeScript with strict settings (null-awareness, no implicit any, no implicit returns) and down-compilation to ES5
+- Optimized bundle creation with Rollup + Uglify
+- Immutable.js import to get you started with decent collections :-)
