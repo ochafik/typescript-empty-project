@@ -1,6 +1,5 @@
 import typescript from 'rollup-plugin-typescript';
 import uglify from 'rollup-plugin-uglify';
-import filesize from 'rollup-plugin-filesize';
 
 export default {
   entry: './main.ts',
@@ -13,6 +12,5 @@ export default {
       typescript: require('typescript')
     }),
     uglify({sourceMap: true}),
-    filesize(),
   ]
 }
