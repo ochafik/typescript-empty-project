@@ -4,6 +4,7 @@ import babel from 'rollup-plugin-babel';
 import commonjs from 'rollup-plugin-commonjs';
 import nodeResolve from 'rollup-plugin-node-resolve';
 import filesize from 'rollup-plugin-filesize';
+import replace from 'rollup-plugin-replace';
 
 export default {
   entry: './main.ts',
@@ -11,6 +12,11 @@ export default {
   dest: 'build/bundle.js',
   sourceMap: true,
   plugins: [
+    replace({
+      'process.env.NODE_ENV' : JSON.stringify('production'),
+      // Workaround for https://github.com/rollup/rollup/issues/795:
+      './example': './example.tsx',
+    }),
     nodeResolve({
       jsnext: true,
       main: true
@@ -18,6 +24,13 @@ export default {
     commonjs({
       include: 'node_modules/**',
       namedExports: {
+        'react' : [
+          'Component',
+          'Children',
+          'createElement',
+          'PropTypes'
+        ],
+        'react-dom' : ['render'],
         'immutable': [
           'Iterable',
           'Seq',
@@ -36,9 +49,6 @@ export default {
         ],
       },
     }),
-    // babel({
-    //   exclude: 'node_modules/**'
-    // }),
     typescript({
       // Force usage of same version of typescript as the project:,
       typescript: require('typescript')
