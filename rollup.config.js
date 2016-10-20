@@ -3,6 +3,7 @@ import uglify from 'rollup-plugin-uglify';
 import babel from 'rollup-plugin-babel';
 import commonjs from 'rollup-plugin-commonjs';
 import nodeResolve from 'rollup-plugin-node-resolve';
+import filesize from 'rollup-plugin-filesize';
 
 export default {
   entry: './main.ts',
@@ -43,5 +44,6 @@ export default {
       typescript: require('typescript')
     }),
     uglify({sourceMap: true}),
+    filesize(),
   ]
 }
