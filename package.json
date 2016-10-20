@@ -1,22 +1,32 @@
 {
   "scripts": {
-    "start": "npm i && concurrently --kill-others \"npm run rollup:w\" \"npm run lite\" ",
+    "start": "concurrently --kill-others \"npm run rollup:w\" \"npm run lite\" ",
     "lite": "lite-server",
     "rollup": "rollup -c",
     "rollup:w": "rollup -c -w",
-    "build": "npm i && npm run rollup && inline-assets index.html build/index.html"
+    "build": "npm run rollup",
+    "build:inline": "npm run rollup && inline-assets index.html build/index.html"
   },
   "dependencies": {
-    "immutable": "^3.8.1"
+    "@types/react": "^0.14.39",
+    "@types/react-dom": "^0.14.17",
+    "es6-lenses": "^0.1.6",
+    "immutable": "^3.8.1",
+    "react": "^15.3.2",
+    "react-dom": "^15.3.2"
   },
   "devDependencies": {
     "concurrently": "^3.1.0",
     "inline-assets": "^1.1.0",
     "lite-server": "^2.2.2",
-    "rollup": "^0.36.1",
+    "rollup": "file:../rollup",
+    "rollup-plugin-babel": "^2.6.1",
+    "rollup-plugin-commonjs": "^5.0.5",
+    "rollup-plugin-node-resolve": "^2.0.0",
     "rollup-plugin-typescript": "^0.8.1",
     "rollup-plugin-uglify": "^1.0.1",
     "rollup-watch": "^2.5.0",
+    "tippex": "^2.2.0",
     "typescript": "^2.0.3"
   }
 }
